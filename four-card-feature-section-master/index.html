@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend+Deca:wght@100..900&family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap"
+    rel="stylesheet">
+
+
+  <style>
+    * {
+      font-family: "Poppins";
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: -50px;
+    }
+
+    #title {
+      max-width: 450px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: hsl(234, 12%, 34%);
+    }
+
+    #title>* {
+      justify-self: center;
+    }
+
+    #title h1 {
+      font-weight: 200;
+      margin-bottom: 0px;
+    }
+
+    #title h2 {
+      font-size: 31px;
+
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    #title p {
+      font-size: 13px;
+      color: hsl(234, 12%, 34%);
+
+      margin-top: 10px;
+      margin-bottom: 50px;
+    }
+
+    #container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 10px 10px;
+      max-width: 1000px;
+      gap: 30px;
+    }
+
+    #container div {
+      box-shadow: 0px 5px 15px -5px hsl(180, 62%, 30%);
+      border-radius: 5px;
+      padding: 5px 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #container h3 {
+      margin-bottom: 0px;
+    }
+
+    #container p {
+      margin-top: 5px;
+      color: hsl(212, 6%, 44%);
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+    #container img {
+      /* position: relative;
+      left:70%; */
+      align-self: flex-end;
+      justify-self: flex-end;
+      width: 25%;
+      margin: 20px 10px;
+    }
+
+    #team-builder-card {
+      grid-column: 2/3;
+      grid-row: 1/3;
+      border-top: 4px solid;
+      border-color: hsl(0, 78%, 62%);
+    }
+
+    #supervisor-card {
+      grid-column: 1/2;
+      grid-row: 2/4;
+      border-top: 4px solid;
+      border-color: hsl(180, 62%, 55%);
+    }
+
+    #calculator-card {
+      grid-column: 3/4;
+      grid-row: 2/4;
+      border-top: 4px solid;
+      border-color: hsl(212, 86%, 64%);
+    }
+
+    #karma-card {
+      grid-column: 2/3;
+      grid-row: 3/5;
+      border-top: 4px solid;
+      border-color: hsl(34, 97%, 64%);
+    }
+
+    @media (max-width:700px) {
+
+      #title h1 {
+        font-size: 25px;
+        font-weight: 200;
+        margin-bottom: 0px;
+      }
+
+      #title h2 {
+        font-size: 24px;
+        
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      
+      #title p {
+        padding-left: 12%;
+        padding-right: 12%;
+        font-size: 13px;
+        color: hsl(234, 12%, 34%);
+
+        margin-top: 10px;
+        margin-bottom: 50px;
+      }
+
+      #container {
+        display: grid;
+        grid-template-columns: auto;
+
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px 10px;
+        max-width: 300px;
+        gap: 30px;
+      }
+
+      #team-builder-card {
+        grid-row: 3/5;
+        grid-column: 1;
+      }
+      
+      #supervisor-card {
+        grid-row: 1/3;
+        grid-column: 01;
+      }
+
+      #calculator-card {
+        grid-row: 7/9;
+        grid-column: 1;
+      }
+      
+      #karma-card {
+        grid-row: 6/7;
+        grid-column: 1;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="title">
+    <h1>Reliable, efficient delivery </h1>
+    <h2>Powered by Technology</h2>
+    <p>Our Artificial Intelligence powered tools use millions of project data points
+      to ensure that your project is successful</p>
+  </div>
+  <div id="container">
+    <div id="team-builder-card">
+      <h3>Team Builder</h3>
+      <p>Scans our talent network to create the optimal team for your project</p>
+      <img src="./images/icon-team-builder.svg" alt="">
+    </div>
+    <div id="supervisor-card">
+      <h3>Supervisor</h3>
+      <p>Monitors activity to identify project roadblocks</p>
+      <img src="./images/icon-supervisor.svg" alt="">
+    </div>
+    <div id="calculator-card">
+      <h3>Calculator</h3>
+      <p>Uses data from past projects to provide better delivery estimates</p>
+      <img src="./images/icon-calculator.svg" alt="">
+    </div>
+    <div id="karma-card">
+      <h3>Karma</h3>
+      <p>Regularly evaluates our talent to ensure quality</p>
+      <img src="./images/icon-karma.svg" alt="">
+    </div>
+  </div>
+
+</body>
+
+</html>
